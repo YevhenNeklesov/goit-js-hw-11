@@ -23,19 +23,28 @@ export const createGallery = (dataArr) => {
                 views,
                 comments,
                 downloads,
-            }) => `<li class="gallery-item">
+            }) =>
+`<li class="gallery-item">
 	<a class="gallery-link" href="${largeImageURL}">
 		<img
 			class="gallery-image"
 			src="${webformatURL}"
 			alt="${tags}"
 			/>
-    <div class="image-stats">
-  <p>Likes </br> ${likes}</p>
-  <p>Views </br> ${views}</p>
-  <p>Comments </br> ${comments}</p>
-  <p>Downloads </br> ${downloads}</p>
-</div>
+        <div class="stats">
+            <h3 class="stats-title">Likes
+             <p class="stats-value">${likes}</p>
+             </h3>
+            <h3 class="stats-title">Views
+             <p class="stats-value">${views}</p>
+             </h3>
+            <h3 class="stats-title">Comments
+             <p class="stats-value">${comments}</p>
+             </h3>
+            <h3 class="stats-title">Downloads
+             <p class="stats-value">${downloads}</p>
+             </h3>
+        </div>
 	</a>
 </li>`
     ).join('')
