@@ -35,7 +35,7 @@ function addImageBySearch (event) {
 
         createGallery(data.hits);
       })
-      .catch(error => console.log(error))
+      .catch(error => alert("An error has occurred: " + error.message))
       .finally(() => {
         event.target.reset();
         loader.classList.add('hidden');
